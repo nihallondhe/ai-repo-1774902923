@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neon-blue: #00f3ff;
+    --deep-purple: #6d28d9;
+    --neon-blue-glow: rgba(0, 243, 255, 0.7);
+    --deep-purple-glow: rgba(109, 40, 217, 0.5);
+  }
+}
+
+@layer utilities {
+  .bg-neon-gradient {
+    background: linear-gradient(135deg, var(--deep-purple) 0%, var(--neon-blue) 100%);
+  }
+  .bg-neon-gradient-hover {
+    background: linear-gradient(135deg, var(--neon-blue) 0%, var(--deep-purple) 100%);
+  }
+  .text-neon-gradient {
+    background: linear-gradient(90deg, var(--neon-blue), var(--deep-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .border-neon-gradient {
+    border-image: linear-gradient(135deg, var(--neon-blue), var(--deep-purple)) 1;
+  }
+  .neon-shadow {
+    box-shadow: 0 0 15px var(--neon-blue-glow), 0 0 30px var(--deep-purple-glow);
+  }
+  .neon-text-glow {
+    text-shadow: 0 0 10px var(--neon-blue-glow), 0 0 20px var(--deep-purple-glow);
+  }
+  .ring-neon {
+    --tw-ring-color: var(--neon-blue);
+  }
+}
